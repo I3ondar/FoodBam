@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+
+body {
+	background-size: cover;
+	background-image: url("Images/foodbamHeader.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+}
+
+#navbar,
+#navbar ul,
+#navbar ul li,
+#navbar ul li a,
+#navbar #menu-button {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	list-style: none;
+ 	line-height: 1;
+  	display: block;
+  	position: relative;
+  	box-sizing: border-box;
+}
+
+#navbar:after,
+#navbar > ul:after {
+  	content: ".";
+  	display: block;
+  	clear: both;
+  	visibility: hidden;
+  	line-height: 0;
+  	height: 0;
+}
+
+#navbar #menu-button {
+  	display: none;
+}
+
+#navbar {
+  	width: auto;
+  	font-family: sans-serif;
+  	line-height: 1;
+  	background: #ffffff;
+}
+
+#menu-line {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	height: 3px;
+  	background: orange;
+  	-webkit-transition: all 0.25s ease-out;
+  	transition: all 0.25s ease-out;
+}
+
+#navbar > ul > li {
+  	float: right;
+}
+
+#navbar > ul > li > a {
+  	padding: 20px;
+  	font-size: 12px;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	color: #000000;
+  	transition: color .2s ease;
+}
+
+#navbar > ul > li:hover > a,
+#navbar > ul > li.active > a {
+  	color: orange;
+}
+
+#navbar > ul > li.has-sub > a {
+  	padding-right: 25px;
+}
+
+#navbar > ul > li.has-sub > a::after {
+  	position: absolute;
+  	top: 21px;
+  	right: 10px;
+  	width: 4px;
+  	height: 4px;
+  	border-bottom: 1px solid #000000;
+  	border-right: 1px solid #000000;
+  	content: "";
+  	-webkit-transform: rotate(45deg);
+  	transform: rotate(45deg);
+  	transition: border-color 0.2s ease;
+}
+
+#navbar ul ul {
+  	position: absolute;
+  	left: -9999px;
+}
+
+#navbar li:hover > ul {
+  	left: auto;
+}
+
+#navbar ul li:hover > ul > li {
+  	height: 32px;
+}
+
+#navbar ul ul li a {
+  	padding: 10px 20px;
+  	width: 160px;
+  	font-size: 12px;
+  	background: white;
+  	text-decoration: none;
+  	color: black;
+  	transition: color .2s ease;
+}
+
+#navbar ul ul li:hover > a,
+#navbar ul ul li a:hover {
+  	color: orange;
+}
